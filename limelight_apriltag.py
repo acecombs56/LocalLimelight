@@ -41,9 +41,9 @@ RESULTS_PORT = 5807  # Limelight's HTTP JSON results endpoint
 PIPELINE_PORT = 5807  # switching pipelines is done via the same host, /update-pipeline
 
 # --- Physical setup defaults (calibrate these for accurate distance) -----
-CAMERA_HEIGHT_M = 0.30      # height of the limelight lens off the ground/reference plane
-CAMERA_ANGLE_DEG = 20.0     # mounting angle of the camera above horizontal
-TAG_HEIGHT_M = 0.13         # height of the center of the AprilTag off the same reference plane
+CAMERA_HEIGHT_M = 1.27      # height of the limelight lens off the ground/reference plane
+CAMERA_ANGLE_DEG = -0.8 # 20.0     # mounting angle of the camera above horizontal
+TAG_HEIGHT_M = 1.54         # height of the center of the AprilTag off the same reference plane
 # --------------------------------------------------------------------------
 
 
@@ -136,8 +136,8 @@ def main():
     parser = argparse.ArgumentParser(description="Read AprilTags from two Limelight pipelines.")
     parser.add_argument("--host", default=DEFAULT_HOST,
                         help="Limelight hostname or IP (default: %(default)s)")
-    parser.add_argument("--pipeline-a", type=int, default=0, help="First pipeline index")
-    parser.add_argument("--pipeline-b", type=int, default=1, help="Second pipeline index")
+    parser.add_argument("--pipeline-a", type=int, default=8, help="First pipeline index")
+    parser.add_argument("--pipeline-b", type=int, default=9, help="Second pipeline index")
     parser.add_argument("--camera-height", type=float, default=CAMERA_HEIGHT_M,
                         help="Camera lens height in meters")
     parser.add_argument("--camera-angle", type=float, default=CAMERA_ANGLE_DEG,
