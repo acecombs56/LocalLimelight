@@ -47,9 +47,9 @@ PIPELINE_PORT = 5807  # switching pipelines is done via the same host, /update-p
 NEURAL_DETECTOR_PIPELINE = 8  # pipeline index configured as the neural network Detector
 
 # --- Physical setup defaults (calibrate these for accurate distance) -----
-CAMERA_HEIGHT_M = 0.30      # height of the limelight lens off the ground/reference plane
-CAMERA_ANGLE_DEG = 20.0     # mounting angle of the camera above horizontal
-OBJECT_HEIGHT_M = 0.13      # height of the center of the trained object off the same reference plane
+CAMERA_HEIGHT_M = 1.27      # height of the limelight lens off the ground/reference plane
+CAMERA_ANGLE_DEG = -0.8     # mounting angle of the camera above horizontal
+OBJECT_HEIGHT_M = 1.54      # height of the center of the trained object off the same reference plane
 # --------------------------------------------------------------------------
 
 
